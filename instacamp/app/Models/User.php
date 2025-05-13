@@ -10,8 +10,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    private $connection = 'mongodb';
-    private $table = 'users';
+    protected $connection = 'mongodb';
+    protected $table = 'users';
 
     protected $fillable = [
         'name',
