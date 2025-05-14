@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function index(User $user)
     {
-        return view('profiles.index', compact('user'));
+        return view('profile.index', compact('user'));
     }
 
     public function edit(User $user)
@@ -20,7 +20,7 @@ class ProfileController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profiles.edit', compact('user'));
+        return view('profile.edit', compact('user'));
     }
 
     public function update(Request $request, User $user)
